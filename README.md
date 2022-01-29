@@ -11,10 +11,32 @@
 ## Demo
 
 <p>
-    To demo simply clone the repo and in your terminal run: 
+    To demo simply visit edelweisspirate.github.io or clone the repo and in your terminal run: 
 </p>
 
 ```npm start```
+
+## Honourable mentions
+
+<p>
+    Below is a list of fun usernames I came across and used for testing. Don't forget to search your own name to see what comes up too! If your name appears in this list and you would like it removed please just drop me  message.
+</p>
+
+<ul>
+    <li>satan</li>
+    <li>andrew</li>
+    <li>7</li>
+    <li>u</li>
+    <li>roach</li>
+    <li>lupe</li>
+    <li>freak</li>
+    <li>light</li>
+    <li>god</li>
+    <li>dog</li>
+    <li>john</li>
+    <li>diablo</li>
+</ul>
+
 
 ## Planned features
 

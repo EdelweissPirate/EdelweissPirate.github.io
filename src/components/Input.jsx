@@ -14,6 +14,7 @@ function Input( { updateUser }) {
         if(text.length > 0){
             updateUser(text)
             setMessage(false)
+            document.activeElement.blur();
         } else {
             setMessage(true)
             setTimeout(() => setMessage(false), 3000)
