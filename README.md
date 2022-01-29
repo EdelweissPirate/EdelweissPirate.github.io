@@ -31,5 +31,4 @@
 </ul>
 <br/>
 
-###### © EdelweissPirate Copyright 2022"# EdelweissPirate.github.io" 
-"# EdelweissPirate.github.io" 
+###### © EdelweissPirate Copyright 2022
