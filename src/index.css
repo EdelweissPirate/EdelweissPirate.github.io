@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Mochiy_Pop_P_One';
+  src: local('Mochiy_Pop_P_One'), url(./fonts/Mochiy_Pop_P_One/MochiyPopPOne-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Signika_Negative';
+  src: local('Signika_Negative'), url(./fonts/Signika_Negative/SignikaNegative-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Rock_Salt';
+  src: local('Rock_Salt'), url(./fonts/Rock_Salt/RockSalt-Regular.ttf) format('truetype');
+}
+
+body {
+  margin: 0;
+  font-family: 'Signika_Negative', 'Fira Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-attachment:fixed;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(-40deg, rgb(22, 24, 31) 35%, rgb(30, 34, 49) 65% 95%);
+  color: #ffffff;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+li {
+  margin: .65rem 0;
+  width: 100%;
+  font-weight:bolder;
+  display: flex;
+  flex-direction: column;
+}
+
+li .mobileList {
+  display: block;
+}
+
+.responsiveStat {
+  font-size: 5.5vw;
+}
+
+.h-82 {
+  height: 23rem
+}
+
+span {
+  font-weight: 100;
+}
+
+.responsiveQuote {
+  font-size: 4.5vw;
+}
+
+.title {
+  font-size: 8vw;
+}
+
+.-rotate_22 {
+  transform: rotate(-33deg);
+}
