@@ -1,0 +1,13 @@
+{
+    "main": [
+        "item",
+        "magic",
+        "materia",
+        "equip",
+        "status",
+        "order",
+        "limit",
+        "config",
+        "save"
+    ]
+}

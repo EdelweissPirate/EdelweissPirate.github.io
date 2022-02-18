@@ -1,33 +1,44 @@
-import Header from './components/Header'
-import Main from './components/Main'
-import RepoLink from './components/RepoLink'
-import UserContext from './context/UserContext'
-import { Suspense, useContext, useEffect, useState } from 'react'
+import { Suspense, useContext, useState, useEffect } from "react";
+import MenuContext from "./context/MenuContext";
+import Main from "./components/Main";
+import { swapClass } from './utils'
 
-function App(){
-    const [userLogo, setUserLogo] = useState(null)
-    const { loading, userData, updateUser } = useContext(UserContext)
+function App() {
+  const [menuActive, setMenuActive] = useState(false)
 
-    useEffect(() => {
-        if(userData)setUserLogo(userData.avatar_url)
-    }, [userData])
+  const { characters, avatars, isMobileDevice } = useContext(MenuContext)
 
-    return (
-        <div className={appStyles.base}>
-            <Header userData={userData} userLogo={userLogo} loading={loading} />
-            <Suspense fallback={null}>
-                <RepoLink />
-            </Suspense>
-            <div className={appStyles.container}>
-                <Main userData={userData} userLogo={userLogo} updateUser={updateUser} loading={loading} />
-            </div>
-        </div>
-    )
+  useEffect(() => {
+      isMobileDevice ? updateMenuActive(false) : updateMenuActive(true)
+  }, [isMobileDevice])
+
+  useEffect(() => {
+    toggleClasses()
+  }, [menuActive])
+
+
+  const updateMenuActive = (onOff) => {
+      setMenuActive(onOff)
+  }
+
+  const toggleClasses = () => {
+      if(menuActive){
+          swapClass('.mainMenu', 'animate-fadeOutRight', 'animate-fadeInLeft')
+      } else {
+          swapClass('.mainMenu', 'animate-fadeInLeft', 'animate-fadeOutRight')
+      }
+  }
+
+  const appContainerStyles = `container px-4 m-auto pt-5 text-2xl sm:text-xl xl:px-40 sm:flex sm:flex-col sm:justify-center sm:items-center sm:h-full ${(menuActive && isMobileDevice) && 'fixed'}`
+
+  return (
+    <div className={appContainerStyles}>
+      <Suspense fallback="loading...">
+        <Main characters={characters} avatars={avatars} handleMenuShow={updateMenuActive} />
+        <p className="sm:fixed sm:top-3 sm:right-8 sm:font-thin text-left pt-5 pb-2 sm:pt-0" >© EdelweissPirate 2022</p>
+      </Suspense>
+    </div>
+  );
 }
 
-const appStyles = {
-    base: 'h-screen overflow-hidden',
-    container: 'container h-full md:flex md:flex-col w-9/12 m-auto md:justify-start mb-10 lg:mb-0'
-}
-
-export default App
+export default App;

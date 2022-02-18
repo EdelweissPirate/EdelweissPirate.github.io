@@ -1,0 +1,44 @@
+{
+    "cloud": {
+        "name": "Cloud",
+        "level": 8,
+        "hp": 334,
+        "max_hp": 347,
+        "mp": 60,
+        "max_mp": 60,
+        "xp": 90,
+        "max_xp": 100,
+        "limitBreak": 30,
+        "max_limitBreak": 100,
+        "level_limitBreak": 1,
+        "avatar": "cloud.png"
+    },
+    "barret": {
+        "name": "Barret",
+        "level": 7,
+        "hp": 345,
+        "max_hp": 345,
+        "mp": 50,
+        "max_mp": 50,
+        "xp": 90,
+        "max_xp": 100,
+        "limitBreak": 20,
+        "max_limitBreak": 100,
+        "level_limitBreak": 1,
+        "avatar": "barret.png"
+    },
+    "tifa": {
+        "name": "Tifa",
+        "level": 5,
+        "hp": 283,
+        "max_hp": 283,
+        "mp": 36,
+        "max_mp": 36,
+        "xp": 1,
+        "max_xp": 100,
+        "limitBreak": 5,
+        "max_limitBreak": 100,
+        "level_limitBreak": 1,
+        "avatar": "tifa.png"
+    }
+}

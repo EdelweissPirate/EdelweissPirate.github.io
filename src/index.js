@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import { UserProvider } from './context/UserContext'
+import { MenuProvider } from './context/MenuContext';
 
 ReactDOM.render(
   <React.StrictMode>
-    <UserProvider>
+    <MenuProvider>
       <App />
-    </UserProvider>
+    </MenuProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
